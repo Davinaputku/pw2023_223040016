@@ -20,7 +20,7 @@
 
         .grid span {
             position: absolute;
-            font-family: sans-serif ;
+            font-family: sans-serif;
             color: black;
             font-weight: 500;
             font-size: 30px;
@@ -41,6 +41,7 @@
         <div class="grid">
             <span>2</span>
         </div>
+        
         <div class="grid">
             <span>2</span>
         </div>
@@ -50,9 +51,11 @@
         <div class="grid">
             <span>3</span>
         </div>
+        
         <div class="grid">
             <span>3</span>
         </div>
+        
         <div class="grid">
             <span>3</span>
         </div>

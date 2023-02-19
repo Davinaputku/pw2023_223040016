@@ -1,6 +1,6 @@
 <?php 
-    $variabel1= "Topi";
-    $variabel2= "Bundar";
+    $var1= "Topi";
+    $var2= "Bundar";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 <body>
     <h1>
         <i>
-            <?php echo ' "'. $variabel1 . ' saya ' . $variabel2 . ', ' . $variabel2 . ' ' . $variabel1 . ' saya." '; ?>
+            <?php echo ' "'. $var1 . ' saya ' . $var2 . ', ' . $var2 . ' ' . $var1 . ' saya." '; ?>
         </i>
     </h1>
 </body>

@@ -1,5 +1,5 @@
 <?php
-    $var1= "16";
+    $var= "16";
 ?>
 
 <!DOCTYPE html>
@@ -11,10 +11,10 @@
     <title>16</title>
 </head>
 <body>
-    <p>Aku adalah angka <b><?= $var1; ?></b></p>
-    <p>Jika aku dikali 5, maka aku sekarang menjadi <b><?= $var1 * 5; ?></b></p>
-    <p>Jika aku dibagi 2, maka aku sekarang menjadi <b><?= $var1 / 2; ?></b></p>
-    <p>Jika aku ditambah 75, maka aku sekarang menjadi <b><?= $var1 + 75; ?></b></p>
-    <p>Jika aku dikurang 20, maka aku sekarang menjadi <b><?= $var1 - 20;?></b></p>
+    <p>Aku adalah angka <b><?= $var; ?></b></p>
+    <p>Jika aku dikali 5, maka aku sekarang menjadi <b><?= $var * 5; ?></b></p>
+    <p>Jika aku dibagi 2, maka aku sekarang menjadi <b><?= $var / 2; ?></b></p>
+    <p>Jika aku ditambah 75, maka aku sekarang menjadi <b><?= $var + 75; ?></b></p>
+    <p>Jika aku dikurang 20, maka aku sekarang menjadi <b><?= $var - 20;?></b></p>
 </body>
 </html>
