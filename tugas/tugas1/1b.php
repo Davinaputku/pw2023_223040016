@@ -1,20 +1,11 @@
-<?php
-    $var= "16";
-?>
+<?php 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>16</title>
-</head>
-<body>
-    <p>Aku adalah angka <b><?= $var; ?></b></p>
-    <p>Jika aku dikali 5, maka aku sekarang menjadi <b><?= $var * 5; ?></b></p>
-    <p>Jika aku dibagi 2, maka aku sekarang menjadi <b><?= $var / 2; ?></b></p>
-    <p>Jika aku ditambah 75, maka aku sekarang menjadi <b><?= $var + 75; ?></b></p>
-    <p>Jika aku dikurang 20, maka aku sekarang menjadi <b><?= $var - 20;?></b></p>
-</body>
-</html>
+    $var = 16;
+
+    echo "Aku adalah angka <b>$var</b> <br>";
+    echo "Jika aku dikali 5, maka aku sekarang menjadi <b>".($var = $var * 5)."</b>  <br>";
+    echo "Jika aku dibagi 2, maka aku sekarang menjadi <b>".($var = $var / 2)."</b> <br>";
+    echo "Jika aku ditambah 75, maka aku sekarang menjadi <b>".($var = $var + 75)."</b> <br>";
+    echo "Jika aku dikurang 20, maka aku sekarang menjadi <b>".($var = $var - 20)."</b> <br>";
+    
+?>
