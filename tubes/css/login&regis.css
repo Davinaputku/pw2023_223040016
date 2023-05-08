@@ -1,0 +1,71 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.regis-login {
+    padding: 10px 0;
+}
+
+
+.regis-login h3 {
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    font-size: 30px;
+}
+
+.regis-login h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    bottom: -1px;
+    background-color: hotpink;
+    left: calc(50% - 60px);
+}
+
+.regis-login label {
+    font-size: 20px;
+    padding: 0 25px;
+}
+
+.registrasi-login {
+    text-align: center;
+    margin: 50px;
+    padding-top: 25px;
+}
+
+.submit {
+    background-color: lavender;
+    color: black;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: mediumpurple;
+}
+
+input, 
+button {
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid;
+    color: black;
+}
+
+button {
+    margin-top: 20px;
+}
