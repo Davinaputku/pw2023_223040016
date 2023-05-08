@@ -14,12 +14,12 @@ html {
 }
 
 /*pariwisata*/
-.education {
+.pariwisata {
     padding: 30px 0;
-    background-color: powderblue;
+    background-color: lightskyblue;
 }
   
-.education .education-list {
+.pariwisata .wisata-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
@@ -27,7 +27,7 @@ html {
     padding-top: 50px;
 }
   
-.education .education-list .pendidikan {
+.pariwisata .wisata-list .wisatawan {
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -35,29 +35,29 @@ html {
     transition: background 0.5s, transform 0.5s;
 }
   
-.education .education-list .pendidikan img {
+.pariwisata .wisata-list .wisatawan img {
     border-radius: 20px;
     margin-bottom: 15px;
 }
   
-.education .education-list .pendidikan p {
+.pariwisata .wisata-list .wisatawan p {
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 15px;
 }
   
-.education .education-list .pendidikan a {
+.pariwisata .wisata-list .wisatawan a {
     font-size: 15px;
     margin-top: 20px;
     display: inline-block;
 }
   
-.education .education-list .pendidikan a:hover {
+.pariwisata .wisata-list .wisatawan a:hover {
     font-size: 23px;
     transition: 0.5s;
 }
   
-.education .education-list .pendidikan:hover {
+.pariwisata .wisata-list .wisatawan:hover {
     background: white;
     transform: translateY(-10px);
 }
@@ -88,7 +88,7 @@ html {
 
 /*cafe*/
 .cafe {
-    background-color:lightcyan;
+    background-color: lightcyan;
 }
 
 .cafe-list {

@@ -27,6 +27,9 @@
                     <input type="password" name="password2" id="password2">
                     <br />
                     <button type="submit" name="register" class="submit">Daftar</button>
+                    <div class="registrasi mb-3 mt-2">
+                        <p>sudah punya akun? <a href="login.php" class="text-decoration-none">klik disini</a></p>
+                    </div>
                 </form>
             </div>
         </div>

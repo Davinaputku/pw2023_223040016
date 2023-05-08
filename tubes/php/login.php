@@ -23,6 +23,9 @@
                     <input type="password" name="password" id="password">
                     <br />
                     <button type="submit" name="register" class="submit">Submit</button>
+                    <div class="registrasi mb-3 mt-2">
+                        <p>Belum punya akun? <a href="registrasi.php" class="text-decoration-none">klik disini</a></p>
+                    </div>
                 </form>
             </div>
         </div>
