@@ -1,3 +1,21 @@
+<?php 
+require 'functions.php';
+
+if (isset($_POST["register"])) {
+
+
+    if( registrasi ($_POST) >0) {
+        echo "<script>
+                alert('user baru berhasil ditambahkan!');
+                </script>"; 
+    } else {
+        echo mysqli_error($conn);
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +46,7 @@
                     <br />
                     <button type="submit" name="register" class="submit">Daftar</button>
                     <div class="registrasi mb-3 mt-2">
-                        <p>sudah punya akun? <a href="login.php" class="text-decoration-none">klik disini</a></p>
+                        <p>sudah punya akun? <a href="login .php" class="text-decoration-none">klik disini</a></p>
                     </div>
                 </form>
             </div>
