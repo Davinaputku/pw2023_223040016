@@ -32,8 +32,8 @@
         <td><?= $student['email']; ?></td>
         <td><?= $student['jurusan']; ?></td>
         <td>
-          <a href="" class="badge text-bg-warning">ubah</a> |
-          <a href="" class="badge text-bg-danger">hapus</a>
+          <a href="ubah.php?id=<?= $student['id']; ?>" class="badge text-bg-warning">ubah</a> |
+          <a href="hapus.php?id=<?= $student['id']; ?>" class="badge text-bg-danger" onclick="return confirm('yakin?');">hapus</a>
         </td>
       </tr>
       <?php endforeach; ?>
