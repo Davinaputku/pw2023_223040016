@@ -1,3 +1,12 @@
+<?php 
+
+require "php/functions.php";
+
+$wisata = query("SELECT * FROM wisata");
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,24 +159,11 @@
         <h2 class="display-3 text-center mb-5">Pariwisata</h2>
         <div class="wisata-list">
           <div class="wisatawan">
-            <img src="img/pariwisata/maribaya.jpg" alt="maribaya">
-            <p>Maribaya</p>
-            <a href="https://www.nativeindonesia.com/the-lodge-maribaya-bandung/" target="_blank">Learn more</a>
-          </div>
-          <div class="wisatawan">
-            <img src="img/pariwisata/kawah putih.jpg" alt="kawahputih">
-            <p>Kawah Putih</p>
-            <a href="https://www.klook.com/id/blog/kawah-putih-bandung/" target="_blank">Learn more</a>
-          </div>
-          <div class="wisatawan">
-            <img src="img/pariwisata/dago.jpg" alt="dago">
-            <p>Dago Dream Park</p>
-            <a href="https://dagodreampark.co.id/" target="_blank">Learn more</a>
-          </div>
-          <div class="wisatawan">
-            <img src="img/pariwisata/orchid.jpg" alt="orchid">
-            <p>SMA Pasundan 2 Bandung</p>
-            <a href="https://www.nativeindonesia.com/orchid-forest-lembang/" target="_blank">Learn more</a>
+            <?php foreach ($wisata as $wst) : ?>
+            <img src="img/pariwisata/ <?= $wst['gambar']; ?>">
+            <p><?= $wst['wisata']; ?></p>
+            <a href="<?= $wst['link']; ?>" target="_blank">Learn more</a>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
@@ -232,7 +228,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 

@@ -31,7 +31,7 @@ if (isset($_POST["register"])) {
         <div class="container">
             <h3>REGISTRASI</h3>
             <div class="registrasi-login">
-                <form action="index.php" method="post">
+                <form action="" method="post">
                     <label for="username">Username</label>
                     <br />
                     <input type="text" name="username" id="username">

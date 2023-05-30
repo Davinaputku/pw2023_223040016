@@ -1,12 +1,30 @@
 <?php
+define('BASE_URL', '/pw2023_223040016/tubes/');
+
+// koneksi ke DB
+$conn = mysqli_connect('localhost', 'root', '', 'tubes') or die('DATABASE ERROR!');
+return $conn;
+
+
+function query($query)
+{
+  global $conn;
+  $result = mysqli_query($conn, $query);
+
+  $rows = [];
+  while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+  }
+  return $rows;
+}
 
 //registrasi
 function registrasi($data) {
-    global $conn;
+    $conn = koneksi();
 
     $username = strtolower(stripslashes($data["username"]));
-    $password = mysqli_real_escape_string($conn, $data["password"]);
-    $password2 = mysqli_real_escape_string($conn, $data["password2"]);
+    $password = $data["password"];
+    $password2 = $data["password2"];
 
     //cek username sudah ada atau belum
     $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
@@ -19,7 +37,7 @@ function registrasi($data) {
     }
 
     //cek konfirmasi password
-    if ($password !== $$password2) {
+    if ($password != $$password2) {
         echo "<script>
                 alert('konfirmasi password tidak sesuai!');
             </script>";
