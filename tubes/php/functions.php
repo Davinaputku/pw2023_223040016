@@ -39,5 +39,23 @@ function hapus ($id) {
   return mysqli_affected_rows($conn);
 }
 
+function ubah($data) {
+  global $conn;
+
+  $id = $data["id"];
+  $wisata = htmlspecialchars($data["wisata"]);
+  $link = htmlspecialchars($data["link"]);
+  $gambar = htmlspecialchars($data["gambar"]);
+
+  $query = "UPDATE wisata SET
+            wisata = '$wisata',
+            link = '$link',
+            gambar = '$gambar'
+            WHERE id = $id
+  ";
+  mysqli_query($conn, $query);
+
+  return mysqli_affected_rows($conn);
+}
 
 ?>
