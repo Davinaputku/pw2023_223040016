@@ -13,18 +13,18 @@
       <div class="row">
         <div class="col-md-8">
           <form action="" method="post">
-            <input type="hidden" name="id" value="<?= $wisata['id']; ?>">
+            <input type="hidden" name="id" value="<?= $wst['id']; ?>">
             <div class="mb-3 w-25">
               <label for="nama" class="form-label">Nama Wisata</label>
-              <input type="name" class="form-control" name="wisata" id="wisata" maxlength="9" autofocus required value="<?= $wisata['wisata']; ?>">
+              <input type="name" class="form-control" name="wisata" id="wisata" maxlength="9" autofocus required value="<?= $wst['wisata']; ?>">
             </div>
             <div class="mb-3">
               <label for="link" class="form-label">Link</label>
-              <input type="text" class="form-control" name="nama" id="nama" value="<?= $wisata['link']; ?>">
+              <input type="text" class="form-control" name="link" id="link" value="<?= $wst['link']; ?>">
             </div>
             <div class="mb-3">
               <label for="gambar" class="form-label">Gambar</label>
-              <input type="text" class="form-control" name="gambar" id="gambar" value="<?= $wisata['gambar']; ?>">
+              <input type="text" class="form-control" name="gambar" id="gambar" value="<?= $wst['gambar']; ?>">
             </div>
             <button class="btn btn-primary" type="submit" name="ubah">Ubah Data</button>
           </form>

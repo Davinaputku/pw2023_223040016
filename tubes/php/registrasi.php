@@ -1,13 +1,12 @@
 <?php 
 require 'functions.php';
 
-if (isset($_POST["register"])) {
+if(isset($_POST["register"])) {
 
-
-    if( registrasi ($_POST) >0) {
+    if(registrasi($_POST) > 0 ) {
         echo "<script>
-                alert('user baru berhasil ditambahkan!');
-                </script>"; 
+                alert('user baru berhasil ditambahkan');
+        </script>";
     } else {
         echo mysqli_error($conn);
     }
@@ -32,22 +31,28 @@ if (isset($_POST["register"])) {
             <h3>REGISTRASI</h3>
             <div class="registrasi-login">
                 <form action="" method="post">
-                    <label for="username">Username</label>
-                    <br />
-                    <input type="text" name="username" id="username">
-                    <br />
-                    <label for="password">Password</label>
-                    <br />
-                    <input type="password" name="password" id="password">
-                    <br />
-                    <label for="password2">Konfirmasi Password</label>
-                    <br />
-                    <input type="password" name="password2" id="password2">
-                    <br />
-                    <button type="submit" name="register" class="submit">Daftar</button>
-                    <div class="registrasi mb-3 mt-2">
-                        <p>sudah punya akun? <a href="login .php" class="text-decoration-none">klik disini</a></p>
-                    </div>
+                <ul>
+                    <li>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username">
+                    </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </li>
+                    <li>
+                        <label for="password2">Konfirmasi Password</label>
+                        <input type="password" name="password2" id="password2">
+                    </li>
+                    <li>
+                        <button type="submit" name="register" class="submit">Daftar</button>
+                    </li>
+                    <li>
+                        <div class="registrasi mb-3 mt-2">
+                            <p>sudah punya akun? <a href="login.php" class="text-decoration-none">klik disini</a></p>
+                        </div>
+                    <li>
+                </ul>    
                 </form>
             </div>
         </div>

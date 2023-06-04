@@ -3,7 +3,7 @@ require('functions.php');
 
 $name = 'ubah wisata';
 $id = $_GET['id'];
-$wisata = query("SELECT * FROM wisata WHERE id = $id")[0];
+$wst = query("SELECT * FROM wisata WHERE id = $id")[0];
 
 if(isset($_POST["ubah"])) {
     if (ubah($_POST) > 0) {
