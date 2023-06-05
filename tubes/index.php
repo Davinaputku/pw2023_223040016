@@ -1,9 +1,14 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+  header("Location: php/login.php");
+  exit;
+}
 
 require "php/functions.php";
 
 $wisata = query("SELECT * FROM wisata");
-
 
 ?>
 
@@ -44,13 +49,10 @@ $wisata = query("SELECT * FROM wisata");
             <a class="nav-link" href="#pariwisata">Pariwisata</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cafe">Cafe</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="php/login.php">Login</a>
+            <a class="nav-link" href="php/logout.php">Logout</a>
           </li>
         </ul>
       </div>
@@ -168,36 +170,36 @@ $wisata = query("SELECT * FROM wisata");
               <h5 class="card-title text-center">Maribaya</h5>
               <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sapiente nihil tempore praesentium, nisi mollitia laboriosam delectus, quisquam ipsum possimus molestiae quos, aliquid repellendus totam.</p>
             </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-        <div class="card" data-aos="zoom-out-down">
-          <img src="img/dago.jpg" class="card-img-top" alt="risoles" />
-          <div class="card-body">
-            <h5 class="card-title text-center">Dago Dream Park</h5>
-            <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat recusandae in nisi sed optio est, debitis consequatur. Placeat, vel. Totam obcaecati iure nemo debitis optio?</p>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-        <div class="card" data-aos="zoom-out-left">
-          <img src="img/orchid.jpg" class="card-img-top" alt="Dadargulung" />
-          <div class="card-body">
-            <h5 class="card-title text-center">Orchid</h5>
-            <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto atque laboriosam quidem quae ipsa quo in alias repudiandae officia magnam officiis adipisci nemo, illo minima!</p>
+        <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
+          <div class="card" data-aos="zoom-out-down">
+            <img src="img/dago.jpg" class="card-img-top" alt="risoles" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Dago Dream Park</h5>
+              <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat recusandae in nisi sed optio est, debitis consequatur. Placeat, vel. Totam obcaecati iure nemo debitis optio?</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-        <div class="card" data-aos="zoom-out-left">
-          <img src="img/kawah putih.jpg" class="card-img-top" alt="Klepon" />
+        <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
+          <div class="card" data-aos="zoom-out-left">
+            <img src="img/orchid.jpg" class="card-img-top" alt="Dadargulung" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Orchid</h5>
+              <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto atque laboriosam quidem quae ipsa quo in alias repudiandae officia magnam officiis adipisci nemo, illo minima!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
+          <div class="card" data-aos="zoom-out-left">
+            <img src="img/kawah putih.jpg" class="card-img-top" alt="Klepon" />
             <div class="card-body">
               <h5 class="card-title text-center">Kawah Putih</h5>
               <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolores sit voluptate expedita accusantium saepe fuga quia cupiditate nam error, ducimus praesentium neque! Suscipit, soluta?</p>
             </div>
+          </div>
         </div>
       </div>
-    </div>
   </section>
 
   <section class="kontak" id="contact">
