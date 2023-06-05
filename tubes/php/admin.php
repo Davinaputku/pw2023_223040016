@@ -29,17 +29,22 @@ if(isset($_POST["cari"])) {
         <a href="tambah.php">Tambah data wisata</a>
 
         <form class="d-flex pt-4" action="" method="POST">
-          <input class="form-control me-2 keyword" type="text" name="keyword" placeholder="Search..">
-          <button class="btn btn-outline-danger tombol-cari" name="cari" type="submit" autocomplete="off">Search</button>
+            <input class="form-control me-2 keyword" type="text" name="keyword" placeholder="Search.." id="keyword">
+            <button class="btn btn-outline-danger tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
         </form>
         
+        <br>
+
+        <div id="container"></div>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Gambar</th>
+                    <th scope="col"></th>
                     <th scope="col">Wisata</th>
-                    <th scope="col">Link</th>
+                    <th scope="col">Deskripsi</th>
+                    <th scope="col">Harga Tiket Masuk</th>
                     <th scope="col">Aksi</th>
                 </tr>
             </thead>
@@ -53,7 +58,8 @@ if(isset($_POST["cari"])) {
                         </td>
                         <td><?= $wst['gambar']; ?></td>
                         <td><?= $wst['wisata']; ?></td>
-                        <td><?= $wst['link']; ?></td>
+                        <td><?= $wst['deskripsi']; ?></td>
+                        <td><?= $wst['harga']; ?></td>
                         <td>
                             <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-warning">ubah</a> |
                             <a href="hapus.php?id=<?= $wst['id']; ?>" class="badge text-bg-danger" onclick="return confirm('YAKIN?')">hapus</a>
@@ -63,12 +69,10 @@ if(isset($_POST["cari"])) {
                 <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
     </div>
 
-
-
-
-
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 

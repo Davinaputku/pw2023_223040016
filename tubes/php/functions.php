@@ -20,12 +20,13 @@ function query($query) {
 function tambah ($data) {
   global $conn;
   $wisata = htmlspecialchars($data["wisata"]);
-  $link = htmlspecialchars($data["link"]);
   $gambar = htmlspecialchars($data["gambar"]);
+  $deskripsi = htmlspecialchars($data["deskripsi"]);
+  $harga = htmlspecialchars($data["harga"]);
 
   $query = "INSERT INTO wisata
   VALUES 
-  (null, '$wisata', '$link', '$gambar')
+  (null, '$wisata', '$gambar', '$deskripsi', '$harga')
   ";
   mysqli_query($conn, $query);
 
@@ -44,13 +45,15 @@ function ubah($data) {
 
   $id = $data["id"];
   $wisata = htmlspecialchars($data["wisata"]);
-  $link = htmlspecialchars($data['link']);
   $gambar = htmlspecialchars($data["gambar"]);
+  $deskripsi = htmlspecialchars($data["deskripsi"]);
+  $harga = htmlspecialchars($data["harga"]);
 
   $query = "UPDATE wisata SET
             wisata = '$wisata',
-            link = '$link',
-            gambar = '$gambar'
+            gambar = '$gambar',
+            deskripsi = '$deskripsi',
+            harga = '$harga'
             WHERE id = $id
   ";
   mysqli_query($conn, $query);
@@ -61,8 +64,9 @@ function ubah($data) {
 function cari($keyword) {
   $query = "SELECT * FROM wisata
             WHERE
-            nama LIKE '%$keyword%' OR
-            link LIKE '%$keyword%'
+            wisata LIKE '%$keyword%' OR
+            deskripsi LIKE '%$keyword%' OR
+            harga LIKE '%$keyword%' 
             ";
             
   return query($query);

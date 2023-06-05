@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["login"])) {
+if (!isset($_SESSION['login'])) {
   header("Location: php/login.php");
   exit;
 }
@@ -9,6 +9,12 @@ if (!isset($_SESSION["login"])) {
 require "php/functions.php";
 
 $wisata = query("SELECT * FROM wisata");
+
+//tombol cari ditekan
+if(isset($_POST["cari"])) {
+  $wisata = cari($_POST["keyword"]); 
+}
+
 
 ?>
 
@@ -33,10 +39,6 @@ $wisata = query("SELECT * FROM wisata");
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-info" type="submit">Search</button>
-        </form>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#home">Home</a>
@@ -160,46 +162,29 @@ $wisata = query("SELECT * FROM wisata");
       <div class="row">
         <div class="col">
           <h2 class="display-3 text-center text-light py-5">Wisata yang ada di Bandung</h2>
+          <form class="d-flex p-5" action="" method="POST">
+            <input class="form-control me-2 keyword" type="text" name="keyword" placeholder="Search.." id="keyword">
+            <button class="btn btn-outline-light tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
+          </form>
         </div>
       </div>
+      <?php $i = 1; ?>
+      <?php foreach ($wisata as $wst) : ?>
       <div class="row justify-content-center ">
+      <th scope="row"><?= $i++; ?></th>
         <div class=" col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
           <div class="card" data-aos="zoom-out-right">
-            <img src="img/maribaya.jpg" class="card-img-top" alt="Pastel" style="object-fit: contain" />
+            <img src="img/<?= $wst['gambar']; ?>" class="card-img-top" alt="Pastel" style="object-fit: contain" />
             <div class="card-body">
-              <h5 class="card-title text-center">Maribaya</h5>
-              <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sapiente nihil tempore praesentium, nisi mollitia laboriosam delectus, quisquam ipsum possimus molestiae quos, aliquid repellendus totam.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-          <div class="card" data-aos="zoom-out-down">
-            <img src="img/dago.jpg" class="card-img-top" alt="risoles" />
-            <div class="card-body">
-              <h5 class="card-title text-center">Dago Dream Park</h5>
-              <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat recusandae in nisi sed optio est, debitis consequatur. Placeat, vel. Totam obcaecati iure nemo debitis optio?</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-          <div class="card" data-aos="zoom-out-left">
-            <img src="img/orchid.jpg" class="card-img-top" alt="Dadargulung" />
-            <div class="card-body">
-              <h5 class="card-title text-center">Orchid</h5>
-              <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto atque laboriosam quidem quae ipsa quo in alias repudiandae officia magnam officiis adipisci nemo, illo minima!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-          <div class="card" data-aos="zoom-out-left">
-            <img src="img/kawah putih.jpg" class="card-img-top" alt="Klepon" />
-            <div class="card-body">
-              <h5 class="card-title text-center">Kawah Putih</h5>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolores sit voluptate expedita accusantium saepe fuga quia cupiditate nam error, ducimus praesentium neque! Suscipit, soluta?</p>
+              <h5 class="card-title text-center"><?= $wst['wisata']; ?></h5>
+              <p class="card-text text-right"><?= $wst['deskripsi']; ?></p>
+              <p class="card-text text-center"><?= $wst['harga']; ?></p>
             </div>
           </div>
         </div>
       </div>
+      <?php endforeach; ?>
+    </div>
   </section>
 
   <section class="kontak" id="contact">
