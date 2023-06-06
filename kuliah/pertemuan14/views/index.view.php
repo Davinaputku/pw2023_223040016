@@ -2,8 +2,7 @@
 <?php require('partials/nav.php'); ?>
 
 <div class="container mt-3">
-  <h1>Halaman Home</h1>
-  <h3>Daftar Mahasiswa</h3>
+  <h1>Daftar Mahasiswa</h1>
 
   <a href="tambah.php" class="btn btn-primary">Tambah Data Mahasiswa</a>
 
