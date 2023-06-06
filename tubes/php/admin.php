@@ -24,16 +24,16 @@ if(isset($_POST["cari"])) {
 
 <body>
     <div class="container mt-3">
-        <h1>Halaman Admin</h1>
-
-        <a href="tambah.php" class="btn btn-primary">Tambah data wisata</a>
-
+        <h2 class="display-3 text-center py-5">Selamat Datang Admin</h2>
+        
+        
         <form class="d-flex pt-4" action="" method="POST">
             <input class="form-control me-2 keyword" type="text" name="keyword" placeholder="Search.." id="keyword" autofocus autocomplete="off">
             <button class="btn btn-outline-danger tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
         </form>
         
         <br>
+        <a href="tambah.php" class="btn btn-primary my-5">Tambah data wisata</a>
 
         <div id="container">
             <?php if($wisata) : ?>
@@ -62,7 +62,7 @@ if(isset($_POST["cari"])) {
                             <td><?= $wst['deskripsi']; ?></td>
                             <td><?= $wst['harga']; ?></td>
                             <td>
-                                <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-warning">ubah</a> |
+                                <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-warning">ubah</a>
                                 <a href="hapus.php?id=<?= $wst['id']; ?>" class="badge text-bg-danger" onclick="return confirm('YAKIN?')">hapus</a>
 
                             </td>
@@ -73,15 +73,16 @@ if(isset($_POST["cari"])) {
             <?php else : ?>
                 <div class="row">
                     <div class="col-md-6">
-                    <div class="alert alert-danger" role="alert">
+                        <div class="alert alert-danger" role="alert">
                         data yang anda cari tidak ada
-                    </div>
                     </div>
                 </div>
             <?php endif ; ?>
         </div>
-    </div>
 
+
+    </div>
+    
     <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

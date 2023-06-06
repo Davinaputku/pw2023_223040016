@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container mt-3">
-      <h1>Ubah Data Wisata</h1> 
+      <h2 class="display-3 text-center py-5">Ubah Data Wisata</h2>
       <div class="row">
         <div class="col-md-8">
           <form action="" method="post">

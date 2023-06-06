@@ -11,8 +11,8 @@ require "php/functions.php";
 $wisata = query("SELECT * FROM wisata");
 
 //tombol cari ditekan
-if(isset($_POST["cari"])) {
-  $wisata = cari($_POST["keyword"]); 
+if (isset($_POST["cari"])) {
+  $wisata = cari($_POST["keyword"]);
 }
 
 
@@ -114,7 +114,7 @@ if(isset($_POST["cari"])) {
   <!--about-->
   <section id="about">
     <div class="my-5 mb-5 container col-8">
-      <h2 class="display-3 text-center mb-5">About</h2>
+      <h2 class="display-3 text-center mb-5">ABOUT</h2>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -168,22 +168,23 @@ if(isset($_POST["cari"])) {
           </form>
         </div>
       </div>
-      <?php $i = 1; ?>
-      <?php foreach ($wisata as $wst) : ?>
-      <div class="row justify-content-center ">
-      <th scope="row"><?= $i++; ?></th>
-        <div class=" col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-          <div class="card" data-aos="zoom-out-right">
-            <img src="img/<?= $wst['gambar']; ?>" class="card-img-top" alt="Pastel" style="object-fit: contain" />
-            <div class="card-body">
-              <h5 class="card-title text-center"><?= $wst['wisata']; ?></h5>
-              <p class="card-text text-right"><?= $wst['deskripsi']; ?></p>
-              <p class="card-text text-center"><?= $wst['harga']; ?></p>
+
+      <div class="row justify-content-center">
+        <?php foreach ($wisata as $wst) : ?>
+          <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
+            <div class="card" data-aos="zoom-out-right">
+              <img src="img/<?= $wst['gambar']; ?>" class="card-img-top" alt="Pastel" style="object-fit: contain" />
+              <div class="card-body">
+                <h5 class="card-title text-center"><?= $wst['wisata']; ?></h5>
+                <p class="card-text text-right"><?= $wst['deskripsi']; ?></p>
+                <p class="card-text text-center"><?= $wst['harga']; ?></p>
+              </div>
             </div>
           </div>
-        </div>
+        <?php endforeach; ?>
       </div>
-      <?php endforeach; ?>
+
+
     </div>
   </section>
 

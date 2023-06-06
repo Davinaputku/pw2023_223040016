@@ -15,7 +15,7 @@ html {
 
 /*pariwisata*/
 .menu {
-    background-color: plum;
+    background-color:cornflowerblue;
 }
 
 .menu .card {
@@ -33,12 +33,12 @@ html {
 }
 
 .menu h5{
-    text-shadow: 0 0 10px firebrick;
+    text-shadow: 0 0 10px aqua;
 }
 
 /*contact*/
 .kontak {
-    background-color: lightcoral;
+    background-color:steelblue;
 }
 
 .kontak .contact h3 {

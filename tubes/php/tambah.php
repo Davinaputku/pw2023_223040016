@@ -36,7 +36,7 @@ if(isset($_POST["submit"])) {
 </head>
 <body>
 <div class="container mt-3">
-    <h1>Tambah Data Pariwisata</h1>
+  <h2 class="display-3 text-center py-5">Tambah Data Wisata</h2>
   
     <div class="row">
       <div class="col-md-8">
