@@ -36,32 +36,6 @@ html {
     text-shadow: 0 0 10px aqua;
 }
 
-/*contact*/
-.kontak {
-    background-color:steelblue;
-}
-
-.kontak .contact h3 {
-    padding-bottom: 30px;
-}
-
-.kontak .contact {
-    padding: 20px;
-}
-
-.kontak p {
-    font-size: 20px;
-}
-
-.kontak button {
-    margin-top: 30px;
-}
-
-.kontak .contact a img:hover {
-    height: 80px;
-    transition: 0.5s;
-}
-
 footer {
     background-color: black;
     padding: 40px;

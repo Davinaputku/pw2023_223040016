@@ -78,10 +78,14 @@ if( isset($_POST["login"]) ) {
                     <ul>
                         <li>
                             <label for="username">Username</label>
+                        </li>
+                        <li>
                             <input type="text" name="username" id="username">
                         </li>
                         <li>
                             <label for="password">Password</label>
+                        </li>
+                        <li>
                             <input type="password" name="password" id="password">
                         </li>
                         <li>
@@ -91,6 +95,8 @@ if( isset($_POST["login"]) ) {
                         </li>
                         <li>
                             <input type="checkbox" name="remember" id="remember">
+                        </li>
+                        <li>
                             <label for="remember">Remember me</label>
                         </li>
                         <li>
@@ -98,7 +104,7 @@ if( isset($_POST["login"]) ) {
                         </li>
                         <li>
                             <div class="registrasi mb-3 mt-2">
-                                <p>belum akun? <a href="registrasi.php" class="text-decoration-none">klik disini</a></p>
+                                <p>belum punya akun? <a href="registrasi.php" class="text-decoration-none">klik disini</a></p>
                             </div>
                         <li>
                     </ul>    

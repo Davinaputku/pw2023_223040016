@@ -29,11 +29,11 @@ if(isset($_POST["cari"])) {
         
         <form class="d-flex pt-4" action="" method="POST">
             <input class="form-control me-2 keyword" type="text" name="keyword" placeholder="Search.." id="keyword" autofocus autocomplete="off">
-            <button class="btn btn-outline-danger tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
+            <button class="btn btn-outline-info tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
         </form>
         
         <br>
-        <a href="tambah.php" class="btn btn-primary my-5">Tambah data wisata</a>
+        <a href="tambah.php" class="btn btn-info my-5">Tambah data wisata</a>
 
         <div id="container">
             <?php if($wisata) : ?>
@@ -62,8 +62,8 @@ if(isset($_POST["cari"])) {
                             <td><?= $wst['deskripsi']; ?></td>
                             <td><?= $wst['harga']; ?></td>
                             <td>
-                                <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-warning">ubah</a>
-                                <a href="hapus.php?id=<?= $wst['id']; ?>" class="badge text-bg-danger" onclick="return confirm('YAKIN?')">hapus</a>
+                                <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-warning py-1" style="text-decoration: none;">ubah</a>
+                                <a href="hapus.php?id=<?= $wst['id']; ?>" class="badge text-bg-danger" style="text-decoration: none;" onclick="return confirm('YAKIN?')">hapus</a>
 
                             </td>
                         </tr>

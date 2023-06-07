@@ -34,14 +34,20 @@ if(isset($_POST["register"])) {
                 <ul>
                     <li>
                         <label for="username">Username</label>
+                    </li>
+                    <li>
                         <input type="text" name="username" id="username">
                     </li>
                     <li>
                         <label for="password">Password</label>
+                    </li>
+                    <li>
                         <input type="password" name="password" id="password">
                     </li>
                     <li>
                         <label for="password2">Konfirmasi Password</label>
+                    </li>
+                    <li>
                         <input type="password" name="password2" id="password2">
                     </li>
                     <li>

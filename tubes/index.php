@@ -51,9 +51,6 @@ if (isset($_POST["cari"])) {
             <a class="nav-link" href="#pariwisata">Pariwisata</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="php/logout.php">Logout</a>
           </li>
         </ul>
@@ -157,68 +154,35 @@ if (isset($_POST["cari"])) {
   </section>
 
   <!--pariwisata-->
-  <section class="menu" id="menu">
+  <section class="menu" id="pariwisata">
     <div class="container py-5">
       <div class="row">
         <div class="col">
           <h2 class="display-3 text-center text-light py-5">Wisata yang ada di Bandung</h2>
-          <form class="d-flex p-5" action="" method="POST">
-            <input class="form-control me-2 keyword" type="text" name="keyword" placeholder="Search.." id="keyword">
-            <button class="btn btn-outline-light tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
+          <form class="d-flex pt-4" action="" method="POST">
+            <input class="form-control me-2 my-5 keyword" type="text" name="keyword" placeholder="Search.." id="keyword" autocomplete="off">
+            <button class="btn btn-outline-light my-5 tombol-cari" name="cari" type="submit" autocomplete="off" id="tombol-cari">Search</button>
           </form>
         </div>
       </div>
 
-      <div class="row justify-content-center">
-        <?php foreach ($wisata as $wst) : ?>
-          <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
-            <div class="card" data-aos="zoom-out-right">
-              <img src="img/<?= $wst['gambar']; ?>" class="card-img-top" alt="Pastel" style="object-fit: contain" />
-              <div class="card-body">
-                <h5 class="card-title text-center"><?= $wst['wisata']; ?></h5>
-                <p class="card-text text-right"><?= $wst['deskripsi']; ?></p>
-                <p class="card-text text-center"><?= $wst['harga']; ?></p>
+      <div id="container">
+        <?php if($wisata) : ?>
+          <div class="row justify-content-center">
+            <?php foreach ($wisata as $wst) : ?>
+              <div class="col-lg-4 col-md-6 my-3 tilt" data-tilt data-tilt-max="50">
+                <div class="card" data-aos="zoom-out-right">
+                  <img src="img/<?= $wst['gambar']; ?>" class="card-img-top" alt="Pastel" style="object-fit: contain" />
+                  <div class="card-body">
+                    <h5 class="card-title text-center"><?= $wst['wisata']; ?></h5>
+                    <p class="card-text text-right"><?= $wst['deskripsi']; ?></p>
+                    <p class="card-text text-center"><?= $wst['harga']; ?></p>
+                  </div>
+                </div>
               </div>
-            </div>
+            <?php endforeach; ?>
           </div>
-        <?php endforeach; ?>
-      </div>
-
-
-    </div>
-  </section>
-
-  <section class="kontak" id="contact">
-    <div class="container">
-      <div class="container-fluid pt-5 contact">
-        <div class="row pb-3">
-          <div class="contact col-md-6">
-            <h3 class="display-3 text-light">CONTACT</h3>
-            <p class="text-light">
-              Silahkan mengisi form yang disebelah kanan jika ada
-              yang mau anda tanyakan atau mau yang anda beli.
-            </p>
-            <p class="text-light">
-              Terimakasih.
-            </p>
-
-            <a href="https://wa.me/qr/DJFIQTPGLYUCD1">
-              <img src="img/WhatsApp.png" alt="whatsapp">
-            </a>
-          </div>
-
-          <div class="col-md-6">
-            <input class="border border-dark form-control form-control mb-1" type="text" name="name" placeholder="Nama">
-
-            <input class="border border-dark form-control form-control mb-1" type="email" name="email" placeholder="Email">
-
-            <input class="border border-dark form-control form-control mb-1" type="text" placeholder="Nomor HP">
-
-            <textarea class="border border-dark form-control form-control-lg" rows="5" name="pesan" placeholder="Masukan Komentar Anda"></textarea>
-
-            <button type="submit" class="btn btn-dark btn-lg form-control">Kirim</button>
-          </div>
-        </div>
+        <?php endif ; ?>
       </div>
     </div>
   </section>
@@ -226,11 +190,12 @@ if (isset($_POST["cari"])) {
   <footer>
     <div class="container">
       <p class="copy">
-        Copyright 2022 - Davina Putri Kusuma
+        Copyright 2023 - Davinaputku
       </p>
     </div>
   </footer>
 
+  <script src="js/script2.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 

@@ -14,9 +14,9 @@
         <div class="col-md-8">
           <form action="" method="post">
             <input type="hidden" name="id" value="<?= $wst['id']; ?>">
-            <div class="mb-3 w-25">
+            <div class="mb-3 col-auto">
               <label for="nama" class="form-label">Nama Wisata</label>
-              <input type="name" class="form-control" name="wisata" id="wisata" maxlength="9" autofocus value="<?= $wst['wisata']; ?>">
+              <input type="name" class="form-control" name="wisata" id="wisata" autofocus value="<?= $wst['wisata']; ?>">
             </div>
             <div class="mb-3">
               <label for="deskripsi" class="form-label">Deskripsi</label>
