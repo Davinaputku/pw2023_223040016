@@ -110,5 +110,42 @@ function registrasi($data) {
   return mysqli_affected_rows($conn);
 }
 
+function regisAdmin($data) {
+  global $conn;
+
+  $admin = strtolower(stripslashes($data["admin"]));
+  $pass = mysqli_real_escape_string($conn, $data["pass"]);
+  $pass2 = mysqli_real_escape_string($conn, $data["pass2"]);
+
+  //username sudah ada atau belum
+  $result = mysqli_query($conn, "SELECT admin FROM admin WHERE admin = '$admin'");
+
+  if(mysqli_fetch_assoc($result)) {
+    echo "<script>
+        alert('admin sudah terdaftar!');
+      </script>";
+
+      return false;
+  }
+
+  //cek konfirmasi password
+  if ($pass !== $pass2) {
+    echo "<script>
+        alert('konfirmasi password tidak sesuai!');
+    </script>";
+
+    return false;
+  } 
+
+  //enkripsi password
+  $pass = password_hash($pass, PASSWORD_DEFAULT);
+
+
+  //tambahkan data baru ke db
+  mysqli_query($conn, "INSERT INTO user VALUES(null, '$admin', '$pass')");
+
+  return mysqli_affected_rows($conn);
+}
+
 
 ?>

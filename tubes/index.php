@@ -50,8 +50,14 @@ if (isset($_POST["cari"])) {
           <li class="nav-item">
             <a class="nav-link" href="#pariwisata">Pariwisata</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="php/logout.php">Logout</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="php/loginAdmin.php">Login Admin</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -115,37 +121,49 @@ if (isset($_POST["cari"])) {
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Bandung
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Bandung adalah kota di Jawa Barat, Indonesia. Terkenal sebagai "Kota Kembang" karena keindahan alam dan banyaknya jenis bunga. 
+              Kota ini memiliki iklim sejuk dan sering menjadi tujuan liburan dari Jakarta.
+              Bandung juga memiliki sejarah yang kaya dan merupakan pusat budaya dan pendidikan di Jawa Barat. 
+              Secara keseluruhan, Bandung menawarkan keindahan alam, budaya, kuliner, dan pendidikan yang membuatnya menarik bagi wisatawan dan penduduk setempat.  
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Kenapa Harus ke Bandung
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              Bandung memiliki sejuta pesona yang selalu membuat wisatawan terpana. 
+              Bagaimana tidak? Mulai dari tempat wisata berbasis alam, destinasi rekreasi kekinian, 
+              hingga kuliner dan tren fesyen bisa Sobat Pesona temui semua di Ibu Kota Jawa Barat ini. 
+              Saking idealnya, Bandung seringkali menjadi destinasi tujuan rekreasi singkat di hari libur 
+              maupun akhir pekan. Baik bersama teman, keluarga, atau sendirian, 
+              selalu ada tempat seru dan menyenangkan yang bisa ditelusuri di Kota Bandung.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
+              Kekayaan alam Bandung tak pernah mengecewakan
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              Suasana sejuk dan pemandangan hijau di berbagai sudut dataran tinggi di Bandung sangat cocok jadi tempat rileksasi pikiran. 
+              Sobat Pesona bisa mencoba berkunjung ke kebun teh asri di kawasan Ciwidey dan menikmati udara segar dengan bebas. 
+              Kalau mau destinasi yang lebih hits, menelusuri setiap sisi hutan pinus di Cikole yang cantik nan instagenic adalah jawabannya. Yang tak boleh ketinggalan, 
+              apalagi kalau bukan wisata alam ke Gunung Tangkuban Perahu. 
+              Ya! Sobat Pesona harus menyaksikan keindahan kawah yang erat kaitannya dengan cerita rakyat Jawa Barat berjudul Sangkuriang itu.
             </div>
           </div>
         </div>
