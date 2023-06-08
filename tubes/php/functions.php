@@ -28,6 +28,7 @@ function tambah ($data) {
   VALUES 
   (null, '$wisata', '$gambar', '$deskripsi', '$harga')
   ";
+  
   mysqli_query($conn, $query);
 
   return mysqli_affected_rows($conn);

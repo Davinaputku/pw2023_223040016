@@ -176,7 +176,9 @@ if (isset($_POST["cari"])) {
                   <div class="card-body">
                     <h5 class="card-title text-center"><?= $wst['wisata']; ?></h5>
                     <p class="card-text text-right"><?= $wst['deskripsi']; ?></p>
-                    <p class="card-text text-center"><?= $wst['harga']; ?></p>
+                    <center>
+                      <b class="card-text text-center"><?= $wst['harga']; ?></b>
+                    </center>
                   </div>
                 </div>
               </div>

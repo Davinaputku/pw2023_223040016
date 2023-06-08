@@ -80,13 +80,13 @@ if( isset($_POST["login"]) ) {
                             <label for="username">Username</label>
                         </li>
                         <li>
-                            <input type="text" name="username" id="username">
+                            <input type="text" name="username" id="username" required autocomplete="off">
                         </li>
                         <li>
                             <label for="password">Password</label>
                         </li>
                         <li>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" required autocomplete="off">
                         </li>
                         <li>
                             <?php if(isset($error)) : ?>
