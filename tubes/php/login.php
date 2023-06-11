@@ -19,8 +19,8 @@ if( isset($_COOKIE['id']) && isset($_COOKIE['key'])) {
 
 }
 
-if( isset($_SESSION['login'])) {
-    header("Location: ../index.php");
+if( isset($_SESSION["login"])) {
+    header("Location: admin.php");
     exit;
 }
 
@@ -32,10 +32,10 @@ if( isset($_POST["login"]) ) {
 
     $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
 
-    // cek username
+    // // cek username
     if( mysqli_num_rows($result) === 1 ) {
 
-    // cek password
+    // // cek password
     $row = mysqli_fetch_assoc($result);
     if (password_verify($password, $row["password"]) ) {
         // set session
@@ -49,7 +49,7 @@ if( isset($_POST["login"]) ) {
             setcookie('key', hash('sha256', $row['username']), time(+60));
         }
 
-        header("Location: ../index.php");
+        header("Location: admin.php");
         exit;
         }
     }

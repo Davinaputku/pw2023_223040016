@@ -1,10 +1,4 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['login'])) {
-  header("Location: php/login.php");
-  exit;
-}
 
 require "php/functions.php";
 
@@ -55,8 +49,7 @@ if (isset($_POST["cari"])) {
               Dropdown
             </a>
             <ul class="dropdown-menu">
-
-              <li><a class="dropdown-item" href="php/loginAdmin.php">Login Admin</a></li>
+              <li><a class="dropdown-item" href="php/login.php">Login Admin</a></li>
             </ul>
           </li>
         </ul>

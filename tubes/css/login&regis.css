@@ -30,7 +30,7 @@ section h3::before {
     width: 120px;
     height: 3px;
     bottom: -1px;
-    background-color: hotpink;
+    background-color:steelblue;
     left: calc(50% - 60px);
 }
 
@@ -40,6 +40,10 @@ section label {
     display: block;
 }
 
+section a {
+    text-decoration: none;
+}
+
 .registrasi-login {
     text-align: center;
     margin: 50px;
@@ -47,13 +51,13 @@ section label {
 }
 
 .submit {
-    background-color: lavender;
+    background-color:lightblue;
     color: black;
     cursor: pointer;
 }
 
 .submit:hover {
-    background-color: mediumpurple;
+    background-color:royalblue;
 }
 
 input, 

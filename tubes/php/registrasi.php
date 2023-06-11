@@ -36,7 +36,7 @@ if(isset($_POST["register"])) {
                         <label for="username">Username</label>
                     </li>
                     <li>
-                        <input type="text" name="username" id="username" required autocomplete="off">
+                        <input type="text" name="username" id="username" required autofocus autocomplete="off">
                     </li>
                     <li>
                         <label for="password">Password</label>
@@ -51,12 +51,16 @@ if(isset($_POST["register"])) {
                         <input type="password" name="password2" id="password2" required autocomplete="off">
                     </li>
                     <li>
+                        <label for="" class="col-sm-2 col-form-label">Status</label>
+                    </li>
+                    <li>
+                        <input type="text" name="status" class="form-control" placeholder="user/admin" required>
+                    </li>
+                    <li>
                         <button type="submit" name="register" class="submit">Daftar</button>
                     </li>
                     <li>
-                        <div class="registrasi mb-3 mt-2">
-                            <p>sudah punya akun? <a href="login.php" class="text-decoration-none">klik disini</a></p>
-                        </div>
+                        <p>sudah punya akun? <a href="login.php">klik disini</a></p>
                     <li>
                 </ul>    
                 </form>

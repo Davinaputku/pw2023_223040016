@@ -1,6 +1,13 @@
 <?php
+session_start();
 
 require 'functions.php';
+
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 
 $wisata = query("SELECT * FROM wisata");
 
@@ -24,6 +31,22 @@ if(isset($_POST["cari"])) {
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm fixed-top">
+        <div class="container">
+        <a class="navbar-brand" style="letter-spacing: 5px !important;" href="#">BANDUNG</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="logout.php">LOGOUT</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
     <div class="container mt-3">
         <h2 class="display-3 text-center py-5">Selamat Datang Admin</h2>
         
@@ -63,9 +86,8 @@ if(isset($_POST["cari"])) {
                             <td><?= $wst['deskripsi']; ?></td>
                             <td><?= $wst['harga']; ?></td>
                             <td>
-                                <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-warning py-1" style="text-decoration: none;">ubah</a>
+                                <a href="ubah.php?id=<?= $wst['id']; ?>" class="badge text-bg-info py-1" style="text-decoration: none;">ubah</a>
                                 <a href="hapus.php?id=<?= $wst['id']; ?>" class="badge text-bg-danger" style="text-decoration: none;" onclick="return confirm('YAKIN?')">hapus</a>
-
                             </td>
                         </tr>
                     <?php endforeach; ?>
