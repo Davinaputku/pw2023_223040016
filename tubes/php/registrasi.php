@@ -57,7 +57,7 @@ if(isset($_POST["register"])) {
                         <input type="text" name="status" class="form-control" placeholder="user/admin" required>
                     </li>
                     <li>
-                        <button type="submit" name="register" class="submit">Daftar</button>
+                        <button type="submit" name="register" class="submit"><a href="login.php">Daftar</a></button>
                     </li>
                     <li>
                         <p>sudah punya akun? <a href="login.php">klik disini</a></p>

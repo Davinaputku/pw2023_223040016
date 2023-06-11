@@ -44,6 +44,10 @@ section a {
     text-decoration: none;
 }
 
+.registrasi-login ul li .daftar {
+    color: black;
+}
+
 .registrasi-login {
     text-align: center;
     margin: 50px;
